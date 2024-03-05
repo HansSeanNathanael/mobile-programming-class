@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:background="?android:attr/colorPrimary">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:text="@string/app_name"
+            android:textSize="18sp"
+            android:textStyle="bold">
+        </TextView>
+    </Toolbar>
+
+    <TextView
+        android:id="@+id/labelInputMathExpression"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+
+        android:layout_margin="8dp"
+
+        android:text="@string/math_expression_input">
+    </TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutMathExpression"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginHorizontal="16dp"
+
+        android:layout_below="@+id/labelInputMathExpression"
+        app:boxStrokeColor="?attr/colorPrimary"
+        app:boxStrokeWidth="1dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextMathExpression"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:id="@+id/linearLayoutButtonCalculateAndExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textInputLayoutMathExpression"
+        android:layout_centerInParent="true"
+
+        android:layout_margin="8dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/buttonCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_margin="4dp"
+            android:text="@string/calculate">
+        </Button>
+        <Button
+            android:id="@+id/buttonExit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_margin="4dp"
+            android:text="@string/exit">
+        </Button>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/labelCalculationResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayoutButtonCalculateAndExit"
+
+        android:layout_margin="8dp"
+        android:text="@string/result">
+    </TextView>
+
+    <TextView
+        android:id="@+id/labelOutputMathExpression"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelCalculationResult"
+
+        android:layout_margin="8dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold">
+    </TextView>
+</RelativeLayout>

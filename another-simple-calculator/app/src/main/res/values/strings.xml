@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Another SimpleCalculator</string>
+    <string name="math_expression_input">Type the math expression</string>
+    <string name="calculate">Calculate</string>
+    <string name="exit">Exit</string>
+    <string name="result">Calculation result</string>
+    <string name="calculation_error">Error!</string>
+</resources>
