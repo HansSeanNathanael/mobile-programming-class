@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Third Calculator</string>
+    <string name="result">Result</string>
+    <string name="error">Error!</string>
+    <string name="zero">0</string>
+    <string name="add">+</string>
+    <string name="subtract">-</string>
+    <string name="multiply">×</string>
+    <string name="divide">÷</string>
+</resources>
