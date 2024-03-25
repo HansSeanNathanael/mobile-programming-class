@@ -42,18 +42,23 @@ public class MainActivity extends AppCompatActivity {
                     double firstNumber = Double.parseDouble(MainActivity.this.firstNumberEditText.getText().toString());
                     double secondNumber = Double.parseDouble(MainActivity.this.secondNumberEditText.getText().toString());
                     double hasil = 0;
+                    String operator = "";
 
                     if (v.getId() == R.id.buttonAddition) {
                         hasil = firstNumber + secondNumber;
+                        operator = getResources().getString(R.string.add);
                     } else if (v.getId() == R.id.buttonSubtraction) {
                         hasil = firstNumber - secondNumber;
+                        operator = getResources().getString(R.string.subtract);
                     } else if (v.getId() == R.id.buttonMultiplication) {
                         hasil = firstNumber * secondNumber;
+                        operator = getResources().getString(R.string.multiply);
                     } else if (v.getId() == R.id.buttonDivision) {
                         hasil = firstNumber / secondNumber;
+                        operator = getResources().getString(R.string.divide);
                     }
 
-                    MainActivity.this.textViewResult.setText(firstNumber + " + " + secondNumber + " = " + hasil);
+                    MainActivity.this.textViewResult.setText(firstNumber + " " + operator + " " + secondNumber + " = " + hasil);
                 }
                 catch (Exception ignored) {
                     MainActivity.this.textViewResult.setText(R.string.error);
