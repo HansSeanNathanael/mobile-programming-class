@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Practice Database</string>
+    <string name="nrp">NRP</string>
+    <string name="name">Nama</string>
+    <string name="save">Simpan</string>
+    <string name="get_data">Ambil Data</string>
+    <string name="delete">Hapus</string>
+    <string name="update">Update</string>
+</resources>
