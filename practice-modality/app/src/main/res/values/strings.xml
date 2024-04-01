@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Practice Modality</string>
+    <string name="show_input_dialog">Show Input Dialog</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_text_here">Enter text here..</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Batal</string>
+
+</resources>
