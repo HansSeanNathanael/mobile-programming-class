@@ -12,7 +12,6 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
@@ -210,8 +209,13 @@ public class MainActivity extends AppCompatActivity {
                             new Thread(() -> {
                                 try {
                                     Bitmap image = MediaStore.Images.Media.getBitmap(MainActivity.this.getContentResolver(), uri);
+                                    if (image != null) {
+                                        image = Bitmap.createScaledBitmap(image, 256, 256, true);
+                                    }
+
+                                    Bitmap finalImage = image;
                                     runOnUiThread(() -> {
-                                        imageViewPhoto.setImageBitmap(image);
+                                        imageViewPhoto.setImageBitmap(finalImage);
                                     });
                                 }
                                 catch (Exception ignored) {}
@@ -234,6 +238,7 @@ public class MainActivity extends AppCompatActivity {
                     case -1:
                         try {
                             BitmapDrawable imageViewPhotoDrawable = (BitmapDrawable) imageViewPhoto.getDrawable();
+
                             Contact newContact = new Contact(
                                 contact != null ? contact.getId() : null,
                                 editTextName.getText().toString(),
