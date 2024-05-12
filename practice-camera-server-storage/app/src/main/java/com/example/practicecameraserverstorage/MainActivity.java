@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
                 byte[] imageData = byteArrayOutputStream.toByteArray();
 
-                URL url = new URL(MainActivity.this.serverURL + "/chat");
+                URL url = new URL(MainActivity.this.serverURL);
                 connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("POST");
                 connection.setRequestProperty("Content-Type", "multipart/form-data;boundary=*****");
